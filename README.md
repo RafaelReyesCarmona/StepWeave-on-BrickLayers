@@ -1,14 +1,14 @@
-# Bricklayers + StepWeave
+# StepWeave on BrickLayers
 [![Version: v0.2.1_SW0.1](https://img.shields.io/badge/Version-v0.2.1_SW0.1-blue?style=for-the-badge&logo=v)]()
 <a href="https://github.com/pedromxavier/flag-badges">
     <img src="https://raw.githubusercontent.com/pedromxavier/flag-badges/main/badges/ES.svg" alt="made in ES">
 </a>&nbsp;
 
-**BrickLayers**: Interlocking Layers Post-Processing Script for PrusaSlicer, OrcaSlicer, and BambuStudio
+**BrickLayers**: Script de Post-Proceso de paredes entrelazadas para for PrusaSlicer, OrcaSlicer, y BambuStudio
 
 **StepWeave**: Técnica de entrelazado del relleno sólido a nivel micrométrico.
 
-Este repo es un fork de [BrickLayers de GeekDetour](https://github.com/GeekDetour/BrickLayers), se ha añadido una nueva técnica para conseguir la mismas propiedades
+Este repo es un fork de [BrickLayers de GeekDetour](https://github.com/GeekDetour/BrickLayers), se ha añadido una nueva técnica para conseguir las mismas propiedades
 en superficies sólidas, no solo en los bordes. Este nueva técnica es **StepWeave**.
 
 El método **StepWeave** debe su nombre a la combinación de "Step" (por el salto vertical en el eje Z entre líneas de extrusión adyacentes) y "Weave" (por el entramado tridimensional
@@ -31,20 +31,28 @@ convencional mientras se multiplica la resistencia interna. Si se aplica en la c
 retención de lubricantes y acabado mate satinado por difracción de la luz)
 
 ### Comparativa con otras Técnicas de Adhesión Inter-Capa
-
+| Categoría | Técnicas Existentes en la Industria | Método StepWeave |
+| :--- | :--- | :--- |
+| Química / Aditivos | Uso de promotores multihidracida, nanoláminas Janus, enlaces covalentes dinámicos o fotoiniciadores para curado UV posterior. | 100% Mecánico y Algorítmico: No requiere modificar la química del polímero ni usar filamentos especiales. |
+| Hardware Complejo | Inserción de remaches transversales, boquillas con protuberancias de texturizado o ranurado asistido por láser. | Compatible con FDM Estándar: Se ejecuta únicamente mediante ingeniería de código G-code y trayectorias de laminado (slicing), sin modificar la impresora. |
+| Post-procesado | Suavizado por vapor químico (Vapor Smoothing). | Refuerzo Estructural Integrado: Actúa durante el proceso de impresión sobre la matriz interna y no solo en la capa externa. |
 
 ## Infografía:
 
 
 ---
-# Sobre esta versión: BrickLayer v0.2.1 + StepWeave 0.1
+# Sobre esta versión: BrickLayer v0.2.1 + StepWeave 0.1 (La Combinación Perfecta)
 
 La técnica **BrickLayers** (o paredes entrelazadas) altera la altura Z de los perímetros de forma alterada y escalonada (como el trabado de los ladrillos
 de una pared), con lo que se evita planos de ruptura en las paredes y bordes de las piezas impresas en FDM.
 
-!['CaliCat' printed with Brick Layers on the Elegoo Centauri Carbon](docs/img/v0.2.1.jpg)
+El uso conjunto de **StepWeave** y **BrickLayers** constituye el sistema de refuerzo definitivo para la fabricación aditiva:
 
----
+- **BrickLayers** resuelve el enclavamiento y la continuidad a **escala macro** en las fronteras de los perímetros y bordes de la pieza.
+- **StepWeave** genera una micro-malla tridimensional a escala **micro** a lo largo de todas las capas de relleno sólido interno.
+
+Al combinar ambas soluciones, se eliminan por completo los planos débiles de fallo en los ejes X, Y y Z. Esta sinergia 
+transforma piezas FDM típicamente anisotrópicas en estructuras sólidas, isotrópicas y altamente resistentes
 
 ## Install Python or Pypy
 To use the script, you need **Python 3** installed in your machine:
